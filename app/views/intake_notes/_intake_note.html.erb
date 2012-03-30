@@ -1,0 +1,9 @@
+      <tr>
+        <td><%= intake_note.id %></td>
+        <td><%= link_to intake_note.note_type, intake_note_path(intake_note) %></td>
+        <td><%= intake_note.created_at %></td>
+        <td>
+          <%= link_to 'Edit', edit_intake_note_path(intake_note), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', intake_note_path(intake_note), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>

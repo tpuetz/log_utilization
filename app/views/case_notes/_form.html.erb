@@ -1,0 +1,38 @@
+<%= form_for @case_note, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> /Case Note</legend>
+
+    <div class="control-group">
+      <%= f.label :type, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :type, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :note, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_area :note, :class => 'text_area' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :counselor, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :counselor, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :case_id, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :case_id, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', case_notes_path, :class => 'btn' %>
+    </div>
+  </fieldset>
+<% end %>

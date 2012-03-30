@@ -1,0 +1,26 @@
+<h1>Intakes</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Primary issue</th>
+      <th>Created at</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @intakes.each do |intake| %>
+      <tr>
+        <td><%= intake.id %></td>
+        <td><%= link_to intake.primary_issue, intake_path(intake) %></td>
+        <td><%= intake.created_at %></td>
+        <td>
+          <%= link_to 'Edit', edit_intake_path(intake), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', intake_path(intake), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New', new_intake_path, :class => 'btn btn-primary' %>

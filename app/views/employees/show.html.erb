@@ -1,0 +1,57 @@
+<h1>/Employee</h1>
+
+<p>
+  <b>First name</b><br>
+  <%= @employee.first_name %>
+</p>
+
+<p>
+  <b>Last name</b><br>
+  <%= @employee.last_name %>
+</p>
+
+<p>
+  <b>Phone</b><br>
+  <%= @employee.phone %>
+</p>
+
+<p>
+  <b>Email</b><br>
+  <%= @employee.email %>
+</p>
+
+<p>
+  <b>Gender</b><br>
+  <%= @employee.gender %>
+</p>
+
+<p>
+  <b>Age</b><br>
+  <%= @employee.age %>
+</p>
+
+<p>
+  <b>Manager</b><br>
+  <%= @employee.manager %>
+</p>
+
+<p>
+  <b>Hr</b><br>
+  <%= @employee.hr %>
+</p>
+
+<p>
+  <b>Source</b><br>
+  <%= @employee.source %>
+</p>
+
+<p>
+  <b>Organization</b><br>
+  <%= @employee.organization_id %>
+</p>
+
+<div class="form-actions">
+  <%= link_to 'Back', employees_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_employee_path(@employee), :class => 'btn' %>
+  <%= link_to 'Delete', employee_path(@employee), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>

@@ -1,0 +1,58 @@
+<h1>/Intake</h1>
+
+<p>
+  <b>Primary issue</b><br>
+  <%= @intake.primary_issue %>
+</p>
+
+<p>
+  <b>Case manager</b><br>
+  <%= @intake.case_manager %>
+</p>
+
+<p>
+  <b>Health insurance</b><br>
+  <%= @intake.health_insurance %>
+</p>
+
+<p>
+  <b>Performance problem</b><br>
+  <%= @intake.performance_problem %>
+</p>
+
+<p>
+  <b>Employee</b><br>
+  <%= @intake.employee_id %>
+</p>
+
+<p>
+  <b>Notes</b><br>
+  <%= @intake.intake_notes.count %>
+</p>
+
+<div class="form-actions">
+  <%= link_to 'Back', intakes_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_intake_path(@intake), :class => 'btn' %>
+  <%= link_to 'Delete', intake_path(@intake), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>
+
+<% if @intake.intake_notes.any? %>
+
+<h2>Notes</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Type</th>
+      <th>Created at</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+
+<%= render @intake_note %>
+  </tbody>
+</table>
+<% end %>
+
+<%= render 'shared/note_form' %>

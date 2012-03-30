@@ -1,0 +1,27 @@
+<h1>/Case Note</h1>
+
+<p>
+  <b>Type</b><br>
+  <%= @case_note.type %>
+</p>
+
+<p>
+  <b>Note</b><br>
+  <%= @case_note.note %>
+</p>
+
+<p>
+  <b>Counselor</b><br>
+  <%= @case_note.counselor %>
+</p>
+
+<p>
+  <b>Case</b><br>
+  <%= @case_note.case_id %>
+</p>
+
+<div class="form-actions">
+  <%= link_to 'Back', case_notes_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_case_note_path(@case_note), :class => 'btn' %>
+  <%= link_to 'Delete', case_note_path(@case_note), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>

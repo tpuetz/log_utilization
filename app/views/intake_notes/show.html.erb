@@ -1,0 +1,27 @@
+<h1>/Intake Note</h1>
+
+<p>
+  <b>Type</b><br>
+  <%= @intake_note.note_type %>
+</p>
+
+<p>
+  <b>Note</b><br>
+  <%= @intake_note.note %>
+</p>
+
+<p>
+  <b>Counselor</b><br>
+  <%= @intake_note.counselor %>
+</p>
+
+<p>
+  <b>Intake</b><br>
+  <%= @intake_note.intake_id %>
+</p>
+
+<div class="form-actions">
+  <%= link_to 'Back', intake_notes_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_intake_note_path(@intake_note), :class => 'btn' %>
+  <%= link_to 'Delete', intake_note_path(@intake_note), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>

@@ -1,0 +1,45 @@
+<%= form_for @intake, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> /Intake</legend>
+
+    <div class="control-group">
+      <%= f.label :primary_issue, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :primary_issue, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :case_manager, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :case_manager, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :health_insurance, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.check_box :health_insurance, :class => 'check_box' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :performance_problem, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.check_box :performance_problem, :class => 'check_box' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :employee_id, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :employee_id, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', intakes_path, :class => 'btn' %>
+    </div>
+  </fieldset>
+<% end %>

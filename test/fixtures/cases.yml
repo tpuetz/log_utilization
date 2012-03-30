@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  primary_issue: MyString
+  case_manager: MyString
+  health_insurance: false
+  performance_problem: false
+  employee_id: 1
+
+two:
+  primary_issue: MyString
+  case_manager: MyString
+  health_insurance: false
+  performance_problem: false
+  employee_id: 1

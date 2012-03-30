@@ -1,0 +1,26 @@
+<h1>Case Notes</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Type</th>
+      <th>Created at</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @case_notes.each do |case_note| %>
+      <tr>
+        <td><%= case_note.id %></td>
+        <td><%= link_to case_note.type, case_note_path(case_note) %></td>
+        <td><%= case_note.created_at %></td>
+        <td>
+          <%= link_to 'Edit', edit_case_note_path(case_note), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', case_note_path(case_note), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New', new_case_note_path, :class => 'btn btn-primary' %>

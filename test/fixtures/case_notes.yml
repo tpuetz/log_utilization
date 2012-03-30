@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  type: 
+  note: MyText
+  counselor: MyString
+  case_id: 1
+
+two:
+  type: 
+  note: MyText
+  counselor: MyString
+  case_id: 1

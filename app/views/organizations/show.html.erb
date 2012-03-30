@@ -1,0 +1,12 @@
+<h1>/Organization</h1>
+
+<p>
+  <b>Name</b><br>
+  <%= @organization.name %>
+</p>
+
+<div class="form-actions">
+  <%= link_to 'Back', organizations_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_organization_path(@organization), :class => 'btn' %>
+  <%= link_to 'Delete', organization_path(@organization), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>

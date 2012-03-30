@@ -1,0 +1,45 @@
+<%= form_for @new_note, :url => intake_notes_path, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> /Intake Note</legend>
+
+    <div class="control-group">
+      <%= f.label :type, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :id, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :type, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :note_type, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :note, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_area :note, :class => 'text_area', placeholder: "Compose new note..." %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :counselor, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :counselor, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :intake_id, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :intake_id, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit "New Note", :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', intake_notes_path, :class => 'btn' %>
+    </div>
+  </fieldset>
+<% end %>
